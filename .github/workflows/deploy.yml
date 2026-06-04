@@ -10,6 +10,10 @@ jobs:
   build-and-deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
+    # Force all actions (including third-party ones) to run on Node.js 24
+    # This eliminates the Node 20 deprecation warnings from GitHub Actions
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       # 1. Checkout the repository code
