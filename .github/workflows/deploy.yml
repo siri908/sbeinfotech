@@ -1,6 +1,6 @@
 name: Deploy to cPanel via FTP
 
-# Trigger this workflow every time you push to the 'master' branch
+# Trigger this workflow every time you push to the 'master' branch in git
 on:
   push:
     branches:
