@@ -1,93 +1,56 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import productsData from '../data/products.json';
 
 export default function Products() {
-  const coreProducts = [
-    {
-      index: '01 / 05',
-      title: 'Desktops & Laptops',
-      desc: 'Entry-level to advanced laptops, desktops, tablets, netbooks, and smart gadgets — for personal use, corporate fleets, and gifting.',
-      img: '/assets/product_laptop.png',
-      alignLeft: true
-    },
-    {
-      index: '02 / 05',
-      title: 'Server & Storage',
-      desc: 'Enterprise-grade servers, complex storage frameworks, networking equipment, and full-scale IT infrastructure with flexible service contracts.',
-      img: '/assets/product_server.png',
-      alignLeft: false
-    },
-    {
-      index: '03 / 05',
-      title: 'Printers & Plotters',
-      desc: 'Standard office printers, wide-format plotters, and multifunction printing units for individuals and corporate environments.',
-      img: '/assets/product_plotter.png',
-      alignLeft: true
-    },
-    {
-      index: '04 / 05',
-      title: 'CCTV Surveillance',
-      desc: 'From basic residential security to intricate, enterprise-grade multi-site monitoring — full installation and servicing.',
-      img: '/assets/product_cctv.png',
-      alignLeft: false
-    },
-    {
-      index: '05 / 05',
-      title: 'Firewall & Cybersecurity',
-      desc: 'Brand-certified hardware firewalls protecting organizations of all sizes, ensuring safe and high-uptime connectivity.',
-      img: '/assets/product_firewall.png',
-      alignLeft: true
-    }
-  ];
-
-  const otherProducts = [
-    'Software Licenses & Antivirus',
-    'Computer Peripherals & Network Access Points',
-    'Biometric Devices',
-    'Air Conditioners',
-    'Sanitary Chemicals'
-  ];
-
   return (
-    <div className="products-view">
+    <div className="bg-white">
       <SEO 
-        title="Our Products & Services | SBEnterprises"
-        description="Explore our extensive range of manufacturer-certified products including servers, desktops, laptops, enterprise printers, surveillance systems, and cybersecurity firewalls."
-        keywords="enterprise hardware, server storage, office laptops, CCTV cameras, firewall security, plotters, Cisco, Dell, HP"
+        title={productsData.seo.title}
+        description={productsData.seo.description}
+        keywords={productsData.seo.keywords}
       />
       {/* Intro Section */}
-      <section className="section-padding products-intro-section">
-        <div className="container">
-          <div className="products-header">
-            <span className="section-subtitle">Catalog – Core Offerings</span>
-            <h1 className="products-title">
-              Hardware, infrastructure, and facility essentials.
+      <section className="py-20 md:py-14 bg-brand-bg-muted">
+        <div className="w-full max-w-[1280px] mx-auto px-6">
+          <div className="max-w-[900px]">
+            <span className="text-[0.8rem] font-semibold tracking-widest uppercase text-brand-accent mb-2 block">
+              {productsData.intro.subtitle}
+            </span>
+            <h1 className="text-4xl sm:text-[3.5rem] font-bold leading-tight text-brand-primary mb-6">
+              {productsData.intro.title}
             </h1>
-            <p className="products-lead">
-              Every product is brand-new, factory-sealed and backed by a dedicated post-purchase service agreement.
+            <p className="text-[1.25rem] text-gray-500 leading-relaxed">
+              {productsData.intro.lead}
             </p>
           </div>
         </div>
       </section>
 
       {/* Core Products Showcase (Alternating Layout) */}
-      <section className="core-products-section">
-        <div className="container flex flex-col gap-8">
-          {coreProducts.map((product) => (
+      <section className="pb-20 bg-white">
+        <div className="w-full max-w-[1280px] mx-auto px-6 flex flex-col gap-8">
+          {productsData.coreProducts.map((product) => (
             <div 
               key={product.index} 
-              className={`product-block ${product.alignLeft ? 'block-img-left' : 'block-img-right'}`}
+              className={`group grid grid-cols-1 items-center py-12 border-b border-brand-border last:border-b-0 gap-10 lg:gap-20 ${
+                product.alignLeft ? 'lg:grid-cols-[1.1fr_0.9fr]' : 'lg:grid-cols-[0.9fr_1.1fr]'
+              }`}
             >
               {/* Product Image Wrapper */}
-              <div className="product-block-visual">
-                <img src={product.img} alt={product.title} className="product-block-img" />
+              <div className={`aspect-[16/10] bg-brand-bg-muted overflow-hidden border border-brand-border rounded-sm w-full ${
+                product.alignLeft ? '' : 'lg:order-2'
+              }`}>
+                <img src={product.img} alt={product.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               </div>
 
               {/* Product Info Panel */}
-              <div className="product-block-info">
-                <span className="product-block-index">{product.index}</span>
-                <h2 className="product-block-title">{product.title}</h2>
-                <p className="product-block-desc">{product.desc}</p>
+              <div className={`flex flex-col items-start py-4 ${
+                product.alignLeft ? '' : 'lg:order-1'
+              }`}>
+                <span className="text-[0.75rem] font-bold text-brand-accent tracking-wider mb-4 font-sans">{product.index}</span>
+                <h2 className="text-3xl sm:text-[2.25rem] font-bold text-brand-primary leading-tight mb-5">{product.title}</h2>
+                <p className="text-[1.05rem] text-gray-500 leading-relaxed">{product.desc}</p>
               </div>
             </div>
           ))}
@@ -95,29 +58,27 @@ export default function Products() {
       </section>
 
       {/* Other Products Section */}
-      <section className="section-padding other-products-section">
-        <div className="container">
-          <div className="other-products-header">
-            <h2 className="section-title">Other products</h2>
-            <p className="section-description">
-              Secondary tech peripherals and facility management items we supply alongside our core offerings.
+      <section className="py-20 md:py-14 bg-brand-bg-muted border-t border-brand-border">
+        <div className="w-full max-w-[1280px] mx-auto px-6">
+          <div className="mb-14">
+            <h2 className="text-4xl font-bold leading-snug text-brand-primary">{productsData.otherProducts.title}</h2>
+            <p className="text-[1.1rem] text-gray-500 mt-4 max-w-[600px]">
+              {productsData.otherProducts.description}
             </p>
           </div>
 
-          <div className="other-products-grid">
-            {otherProducts.map((item, idx) => (
-              <div key={idx} className="other-product-card">
-                <span className="other-product-bullet"></span>
-                <h4 className="other-product-title">{item}</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {productsData.otherProducts.items.map((item, idx) => (
+              <div key={idx} className="bg-white border border-brand-border rounded-sm p-8 flex items-center gap-4 transition-all duration-250 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary-light">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0"></span>
+                <h4 className="text-[0.95rem] font-semibold text-brand-primary leading-snug">{item}</h4>
               </div>
             ))}
             {/* Blank Placeholder card to align 3x2 grid as shown in screenshots */}
-            <div className="other-product-card blank-card"></div>
+            <div className="hidden lg:flex bg-transparent border-none pointer-events-none p-8"></div>
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 }

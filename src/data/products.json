@@ -1,0 +1,60 @@
+{
+  "seo": {
+    "title": "Our Products & Services | SBEnterprises",
+    "description": "Explore our extensive range of manufacturer-certified products including servers, desktops, laptops, enterprise printers, surveillance systems, and cybersecurity firewalls.",
+    "keywords": "enterprise hardware, server storage, office laptops, CCTV cameras, firewall security, plotters, Cisco, Dell, HP"
+  },
+  "intro": {
+    "subtitle": "Catalog – Core Offerings",
+    "title": "Hardware, infrastructure, and facility essentials.",
+    "lead": "Every product is brand-new, factory-sealed and backed by a dedicated post-purchase service agreement."
+  },
+  "coreProducts": [
+    {
+      "index": "01 / 05",
+      "title": "Desktops & Laptops",
+      "desc": "Entry-level to advanced laptops, desktops, tablets, netbooks, and smart gadgets — for personal use, corporate fleets, and gifting.",
+      "img": "/assets/product_laptop.png",
+      "alignLeft": true
+    },
+    {
+      "index": "02 / 05",
+      "title": "Server & Storage",
+      "desc": "Enterprise-grade servers, complex storage frameworks, networking equipment, and full-scale IT infrastructure with flexible service contracts.",
+      "img": "/assets/product_server.png",
+      "alignLeft": false
+    },
+    {
+      "index": "03 / 05",
+      "title": "Printers & Plotters",
+      "desc": "Standard office printers, wide-format plotters, and multifunction printing units for individuals and corporate environments.",
+      "img": "/assets/product_plotter.png",
+      "alignLeft": true
+    },
+    {
+      "index": "04 / 05",
+      "title": "CCTV Surveillance",
+      "desc": "From basic residential security to intricate, enterprise-grade multi-site monitoring — full installation and servicing.",
+      "img": "/assets/product_cctv.png",
+      "alignLeft": false
+    },
+    {
+      "index": "05 / 05",
+      "title": "Firewall & Cybersecurity",
+      "desc": "Brand-certified hardware firewalls protecting organizations of all sizes, ensuring safe and high-uptime connectivity.",
+      "img": "/assets/product_firewall.png",
+      "alignLeft": true
+    }
+  ],
+  "otherProducts": {
+    "title": "Other products",
+    "description": "Secondary tech peripherals and facility management items we supply alongside our core offerings.",
+    "items": [
+      "Software Licenses & Antivirus",
+      "Computer Peripherals & Network Access Points",
+      "Biometric Devices",
+      "Air Conditioners",
+      "Sanitary Chemicals"
+    ]
+  }
+}

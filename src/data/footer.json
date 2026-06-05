@@ -1,0 +1,23 @@
+{
+  "brandName": "SBENTERPRISES",
+  "description": "Providing factory-sealed, manufacturer-certified products with dedicated post-purchase service.",
+  "office": {
+    "heading": "Regional Office",
+    "addressLines": [
+      "304, SP Residency, Road Number 1,",
+      "(Near Uma Beauty Parlour), Medipalli,",
+      "Hyderabad, Medchal Malkajgiri,",
+      "Telangana, 500098."
+    ]
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "phone": {
+      "display": "+91 90327 47551",
+      "href": "+919032747551"
+    },
+    "email": "info@sbeinfotech.in"
+  },
+  "copyright": "SIRI BHAVANI ENTERPRISES. ALL RIGHTS RESERVED.",
+  "credit": "ACCOUNTS MANAGED BY SHIVANI DIDI"
+}

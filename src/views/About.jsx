@@ -1,103 +1,94 @@
 import React from 'react';
 import { ShieldCheck, Tags, HeartHandshake, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import aboutData from '../data/about.json';
+
+const IconMap = {
+  ShieldCheck: ShieldCheck,
+  Tags: Tags,
+  HeartHandshake: HeartHandshake
+};
 
 export default function About({ onContactClick }) {
-  const values = [
-    {
-      icon: <ShieldCheck size={36} className="value-icon" />,
-      num: '01',
-      title: 'Factory-sealed',
-      desc: 'Brand-new, manufacturer-certified products only.'
-    },
-    {
-      icon: <Tags size={36} className="value-icon" />,
-      num: '02',
-      title: 'Competitive pricing',
-      desc: 'Market-aligned rates without compromising on quality.'
-    },
-    {
-      icon: <HeartHandshake size={36} className="value-icon" />,
-      num: '03',
-      title: 'Long-term service',
-      desc: 'Dedicated post-purchase service agreements built for trust.'
-    }
-  ];
-
   return (
-    <div className="about-view">
+    <div className="bg-white">
       <SEO 
-        title="About Us | Siri Bhavani Enterprises (SBEnterprises)"
-        description="Learn about the mission, values, and evolution of Siri Bhavani Enterprises (SBEnterprises), your trusted technology hardware and facility solutions partner."
-        keywords="about SBEnterprises, Siri Bhavani Enterprises mission, tech startup evolution, reliable IT partner, corporate values"
+        title={aboutData.seo.title}
+        description={aboutData.seo.description}
+        keywords={aboutData.seo.keywords}
       />
       {/* Intro Section */}
-      <section className="section-padding about-intro-section">
-        <div className="container">
-          <div className="about-header">
-            <span className="section-subtitle">About – Siri Bhavani Enterprises</span>
-            <h1 className="about-title">
-              Making technology accessible and reliable for everyone.
+      <section className="py-20 md:py-14 bg-brand-bg-muted">
+        <div className="w-full max-w-[1280px] mx-auto px-6">
+          <div className="max-w-[900px]">
+            <span className="text-[0.8rem] font-semibold tracking-widest uppercase text-brand-accent mb-2 block">
+              {aboutData.intro.subtitle}
+            </span>
+            <h1 className="text-4xl sm:text-[2.5rem] font-bold leading-tight text-brand-primary mb-6">
+              {aboutData.intro.title}
             </h1>
-            <p className="about-lead">
-              Also operating as SBEnterprises — a trusted partner in IT & Facility Solutions, serving thousands of clients across Telangana, Andhra Pradesh, and surrounding regions.
+            <p className="text-[1.2rem] text-gray-500 leading-relaxed">
+              {aboutData.intro.lead}
             </p>
           </div>
         </div>
       </section>
 
       {/* Mission & Evolution Detail Section */}
-      <section className="section-padding about-details-section">
-        <div className="container grid grid-2 details-grid">
+      <section className="py-20 md:py-14 bg-white">
+        <div className="w-full max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Mission */}
-          <div className="detail-block">
-            <h3 className="block-title">Our Mission</h3>
-            <p className="block-text">
-              Founded to make technology accessible and reliable, we focus on delivering high-quality, cost-effective hardware, IT infrastructure, and facility essentials tailored to client needs.
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl font-bold text-brand-primary">{aboutData.details.mission.title}</h3>
+            <p className="text-[1rem] text-gray-500 leading-relaxed">
+              {aboutData.details.mission.text}
             </p>
           </div>
 
           {/* Evolution */}
-          <div className="detail-block">
-            <h3 className="block-title">Our Evolution</h3>
-            <p className="block-text">
-              We progressed from a modest tech device sales startup into a comprehensive IT solutions provider through strategic manufacturer partnerships and solid client relationships built on trust.
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl font-bold text-brand-primary">{aboutData.details.evolution.title}</h3>
+            <p className="text-[1rem] text-gray-500 leading-relaxed">
+              {aboutData.details.evolution.text}
             </p>
           </div>
         </div>
       </section>
 
       {/* What We Stand For Section */}
-      <section className="section-padding values-section">
-        <div className="container">
-          <h2 className="section-title values-header-title">What we stand for</h2>
+      <section className="py-20 md:py-14 bg-brand-bg-muted">
+        <div className="w-full max-w-[1280px] mx-auto px-6">
+          <h2 className="text-3xl font-bold text-brand-primary mb-12">{aboutData.values.title}</h2>
 
-          <div className="grid grid-3 values-grid">
-            {values.map((val) => (
-              <div key={val.num} className="value-card">
-                <div className="value-card-header flex justify-between items-center">
-                  {val.icon}
-                  <span className="value-num">{val.num}</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {aboutData.values.list.map((val) => {
+              const IconComponent = IconMap[val.iconName] || ShieldCheck;
+              return (
+                <div key={val.num} className="bg-white border border-brand-border rounded-xs p-8 flex flex-col justify-between min-h-[260px]">
+                  <div className="flex justify-between items-center mb-6">
+                    <IconComponent size={36} className="text-brand-accent shrink-0" />
+                    <span className="text-[0.95rem] font-bold text-gray-400 tracking-wider">{val.num}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-[1.3rem] font-bold text-brand-primary mb-3">{val.title}</h3>
+                    <p className="text-[0.95rem] text-gray-500 leading-relaxed">{val.desc}</p>
+                  </div>
                 </div>
-                <h3 className="value-card-title">{val.title}</h3>
-                <p className="value-card-text">{val.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding cta-section">
-        <div className="container cta-container">
-          <h2 className="cta-title">Ready to discuss your infrastructure?</h2>
-          <button onClick={onContactClick} className="btn btn-primary cta-btn">
-            Get in touch <ArrowRight size={18} style={{ marginLeft: '0.65rem' }} />
+      <section className="bg-brand-primary text-white text-center py-24 md:py-20">
+        <div className="w-full max-w-[1280px] mx-auto px-6 flex flex-col items-center gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white max-w-[600px] leading-tight">{aboutData.cta.title}</h2>
+          <button onClick={onContactClick} className="inline-flex items-center justify-center px-7 py-3.5 text-[0.95rem] font-medium rounded-xs border border-transparent cursor-pointer transition-all duration-250 bg-white text-brand-primary hover:bg-brand-accent-light hover:-translate-y-[2px] hover:shadow-[0_4px_12px_rgba(255,255,255,0.15)] active:translate-y-0">
+            {aboutData.cta.btnText} <ArrowRight size={18} className="ml-[0.65rem]" />
           </button>
         </div>
       </section>
-
-      
     </div>
   );
 }
