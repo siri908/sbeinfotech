@@ -1,0 +1,98 @@
+{
+  "seo": {
+    "title": "SBEnterprises | IT & Facility Solutions Provider",
+    "description": "SBEnterprises (Siri Bhavani Enterprises) is your trusted IT & Facility Solutions partner, serving Telangana, Andhra Pradesh, and surrounding South India regions with manufacturer-certified hardware and cybersecurity.",
+    "keywords": "IT solutions, facility management, cybersecurity, hardware providers, networking, CCTV surveillance, firewall, enterprise IT, Hyderabad, South India, Siri Bhavani Enterprises"
+  },
+  "hero": {
+    "badge": "Serving Telangana & Andhra Pradesh",
+    "title": "Your Trusted Partner in IT & Facility Solutions.",
+    "desc": "Comprehensive infrastructure management — from enterprise-grade servers to full-scale facility security systems, delivered with manufacturer-certified reliability.",
+    "ctaExplore": "Explore Solutions",
+    "ctaContact": "Contact Us",
+    "imgSrc": "/assets/hero_server_rack.png",
+    "imgAlt": "High Tech Server Rack Cabinet"
+  },
+  "partners": {
+    "label": "Strategic Manufacturer Partnerships",
+    "brands": [
+      "DELL", "HP", "Lenovo", "Cisco", "Fortinet", 
+      "SonicWall", "D-Link", "TP-Link", "Bitdefender", "Microsoft", "Adobe"
+    ]
+  },
+  "offerings": {
+    "title": "Core Offerings",
+    "description": "Manufacturer-certified hardware for high-uptime environments.",
+    "categoryLabel": "(05) CATEGORIES",
+    "list": [
+      {
+        "id": "laptops",
+        "title": "Desktops & Laptops",
+        "desc": "Consumer electronics and corporate fleets with dedicated service agreements.",
+        "img": "/assets/product_laptop.png"
+      },
+      {
+        "id": "server",
+        "title": "Server & Storage",
+        "desc": "High-performance frameworks for complex data management.",
+        "img": "/assets/product_server.png"
+      },
+      {
+        "id": "plotters",
+        "title": "Printers & Plotters",
+        "desc": "Wide-format professional units built for corporate production spaces.",
+        "img": "/assets/product_plotter.png"
+      },
+      {
+        "id": "cctv",
+        "title": "CCTV Surveillance",
+        "desc": "Multi-site monitoring solutions with enterprise-grade installation.",
+        "img": "/assets/product_cctv.png"
+      },
+      {
+        "id": "firewall",
+        "title": "Firewall & Cybersecurity",
+        "desc": "Brand-certified hardware protecting against advanced cyber threats.",
+        "img": "/assets/product_firewall.png"
+      }
+    ],
+    "essentials": {
+      "title": "Facility Essentials",
+      "items": [
+        "Software Licenses & Antivirus",
+        "Peripherals & Network Access Points",
+        "Biometric Devices",
+        "Air Conditioners",
+        "Sanitary Chemicals"
+      ]
+    }
+  },
+  "stats": {
+    "title": "Making technology accessible and reliable across South India.",
+    "description": "Founded as a modest tech sales startup, SBEnterprises has evolved into a comprehensive IT solutions provider through strategic manufacturer partnerships and deep client trust.",
+    "counters": [
+      { "num": "1000+", "label": "Clients Served" },
+      { "num": "11+", "label": "Global Partners" }
+    ],
+    "clientsCard": {
+      "title": "Major Clients",
+      "list": [
+        { "name": "Telangana State Police Department", "desc": "Surveillance & Infrastructure" },
+        { "name": "VaniMedia", "desc": "IT Systems Management" }
+      ],
+      "note": "Additional accounts managed via Shivani Didi"
+    }
+  },
+  "testimonials": [
+    {
+      "quote": "\"SBEnterprises stands out for their professionalism and dedication. We've seen tangible improvements in our processes since partnering with them.\"",
+      "author": "Arjun T.",
+      "role": "Business Consultant"
+    },
+    {
+      "quote": "\"The team at SBEnterprises is exceptional. They understand our challenges and provide innovative solutions that truly make a difference.\"",
+      "author": "Priya D.",
+      "role": "Project Lead"
+    }
+  ]
+}

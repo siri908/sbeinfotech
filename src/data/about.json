@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "About Us | Siri Bhavani Enterprises (SBEnterprises)",
+    "description": "Learn about the mission, values, and evolution of Siri Bhavani Enterprises (SBEnterprises), your trusted technology hardware and facility solutions partner.",
+    "keywords": "about SBEnterprises, Siri Bhavani Enterprises mission, tech startup evolution, reliable IT partner, corporate values"
+  },
+  "intro": {
+    "subtitle": "About – Siri Bhavani Enterprises",
+    "title": "Making technology accessible and reliable for everyone.",
+    "lead": "Also operating as SBEnterprises — a trusted partner in IT & Facility Solutions, serving thousands of clients across Telangana, Andhra Pradesh, and surrounding regions."
+  },
+  "details": {
+    "mission": {
+      "title": "Our Mission",
+      "text": "Founded to make technology accessible and reliable, we focus on delivering high-quality, cost-effective hardware, IT infrastructure, and facility essentials tailored to client needs."
+    },
+    "evolution": {
+      "title": "Our Evolution",
+      "text": "We progressed from a modest tech device sales startup into a comprehensive IT solutions provider through strategic manufacturer partnerships and solid client relationships built on trust."
+    }
+  },
+  "values": {
+    "title": "What we stand for",
+    "list": [
+      {
+        "iconName": "ShieldCheck",
+        "num": "01",
+        "title": "Factory-sealed",
+        "desc": "Brand-new, manufacturer-certified products only."
+      },
+      {
+        "iconName": "Tags",
+        "num": "02",
+        "title": "Competitive pricing",
+        "desc": "Market-aligned rates without compromising on quality."
+      },
+      {
+        "iconName": "HeartHandshake",
+        "num": "03",
+        "title": "Long-term service",
+        "desc": "Dedicated post-purchase service agreements built for trust."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to discuss your infrastructure?",
+    "btnText": "Get in touch"
+  }
+}

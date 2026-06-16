@@ -7,13 +7,12 @@ import Home from './views/Home';
 import About from './views/About';
 import Products from './views/Products';
 import Partners from './views/Partners';
-import GlobalStyles from './components/GlobalStyles';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <div className="app-layout flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col bg-white text-brand-primary font-sans">
       {/* Navigation Header */}
       <Header
         onContactClick={() => setIsContactOpen(true)}
@@ -38,8 +37,6 @@ function App() {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
       />
-
-      <GlobalStyles />
     </div>
   );
 }

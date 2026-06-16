@@ -1,0 +1,58 @@
+{
+  "seo": {
+    "title": "Our Tech Partners | SBEnterprises",
+    "description": "We partner with industry-leading brands like Lenovo, Dell, HP, Cisco, and Sophos to supply genuine, manufacturer-warranted enterprise IT solutions.",
+    "keywords": "authorized IT partners, Lenovo distributor, Dell reseller, HP partner, Sophos security, genuine hardware warranty"
+  },
+  "intro": {
+    "subtitle": "Partners & Clients",
+    "title": "Authorized by the world's leading technology brands.",
+    "lead": "Our strategic manufacturer partnerships let us deliver factory-sealed, certified hardware at competitive pricing — with the service contracts to match."
+  },
+  "partnerCategories": [
+    {
+      "id": "hardware",
+      "label": "Hardware & Systems",
+      "brands": [
+        "DELL",
+        "HP",
+        "Lenovo"
+      ]
+    },
+    {
+      "id": "network",
+      "label": "Network & Security",
+      "brands": [
+        "Cisco",
+        "Fortinet",
+        "SonicWall",
+        "D-Link",
+        "TP-Link",
+        "Bitdefender"
+      ]
+    },
+    {
+      "id": "software",
+      "label": "Software Ecosystems",
+      "brands": [
+        "Microsoft",
+        "Adobe",
+        ""
+      ]
+    }
+  ],
+  "clients": {
+    "title": "Key clients",
+    "list": [
+      {
+        "name": "Telangana State Police Department",
+        "desc": "Surveillance & Infrastructure"
+      },
+      {
+        "name": "VaniMedia",
+        "desc": "IT Systems Management"
+      }
+    ],
+    "note": "Additional client accounts managed via Shivani Didi."
+  }
+}
