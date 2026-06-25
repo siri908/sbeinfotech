@@ -7,6 +7,8 @@ import Home from './views/Home';
 import About from './views/About';
 import Products from './views/Products';
 import Partners from './views/Partners';
+import Blog from './views/Blog';
+import BlogPost from './views/BlogPost';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -25,6 +27,8 @@ function App() {
           <Route path="/about" element={<About onContactClick={() => setIsContactOpen(true)} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
